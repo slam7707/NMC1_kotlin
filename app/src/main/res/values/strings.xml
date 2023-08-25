@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NMC1</string>
+    <string name="tab_pos">Position</string>
+    <string name="tab_rep">Repeat</string>
+    <string name="tab_cstep">C-Step</string>
+    <string name="tab_base">Base</string>
+    <string name="tab_set">Settings</string>
+</resources>
