@@ -11,13 +11,14 @@ import android.view.View
 
 class NMC1View (context : Context) : View(context) {
 
-//  val m_context: Context
+    val m_context: Context
     val m_rect : Rect
 
     init {
-//      this.m_context = context
+        Log.d("myLog", "------------------------- in view")
+        this.m_context = context
 
-        val display = context.applicationContext?.resources?.displayMetrics
+        val display = m_context.applicationContext?.resources?.displayMetrics
 //      val deviceCX = display?.widthPixels
 //      val deviceCY = display?.heightPixels
 
