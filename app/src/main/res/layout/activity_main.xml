@@ -49,7 +49,19 @@
 
         </com.google.android.material.tabs.TabLayout>
 
-        <include layout="@layout/nmc1_info"/>
+        <TextView
+            android:id="@+id/mainText"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:text="in xml"
+            android:textSize="100sp"/>
+
+        <include layout="@layout/nmc1_info"
+            android:id="@+id/nmc1_info_view"/>
+
+        <include layout="@layout/nmc1_common_buttons"
+            android:id="@+id/nmc1_com_btn" />
         <!--
         <LinearLayout
             android:id="@+id/main_linear"
