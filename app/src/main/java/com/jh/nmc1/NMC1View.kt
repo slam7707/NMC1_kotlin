@@ -38,7 +38,7 @@ class NMC1View (context : Context) : View(context) {
 
         val green = Paint()
         green.style = Paint.Style.STROKE
-        green.strokeWidth = 10f
+        green.strokeWidth = 20f
         green.color =Color.GREEN
         canvas?.drawRect(m_rect, green)
     }
