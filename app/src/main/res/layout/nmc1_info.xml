@@ -9,6 +9,5 @@
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="in xml"
         android:textSize="100sp"/>
 </FrameLayout>

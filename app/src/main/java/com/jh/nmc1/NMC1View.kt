@@ -15,7 +15,7 @@ class NMC1View (context : Context) : View(context) {
     val m_rect : Rect
 
     init {
-        Log.d("myLog", "------------------------- in view")
+        Log.d("myLog", "------------------ NMC1View Init")
         this.m_context = context
 
         val display = m_context.applicationContext?.resources?.displayMetrics
