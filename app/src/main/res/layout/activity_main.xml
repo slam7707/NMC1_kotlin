@@ -61,6 +61,9 @@
 
         <include layout="@layout/nmc1_common_buttons"
             android:id="@+id/nmc1_com_btn" />
+
+        <include layout="@layout/nmc1pos"
+            android:id="@+id/nmc1poslay" />
         <!--
         <LinearLayout
             android:id="@+id/main_linear"

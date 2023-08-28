@@ -4,4 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <TextView
+    android:id="@+id/comView"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    android:text="1234567890"
+    android:textSize="100sp"/>
 </LinearLayout>
