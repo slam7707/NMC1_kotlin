@@ -15,7 +15,7 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
     init {
         Log.d("myLog", "------------------ MainProc Init")
         nmc1View = NMC1View(context)
-        nmc1ComBtn = NMC1ComButtons((context))
+        nmc1ComBtn = NMC1ComButtons(context)
     }
 
     public fun MPGetMainView() : NMC1View {
@@ -24,7 +24,6 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
 
     public fun MPElementsInit() {
         binding.root.addView(nmc1View)
-        binding.nmc1ComBtn.
 
 
 
