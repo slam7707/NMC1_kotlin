@@ -8,8 +8,20 @@
         <item name="android:statusBarColor">@color/black</item>
     </style>
 
-    <style name="Theme.NMC1" parent="Base.Theme.NMC1" />
-    <style name="tab_main_size" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">11sp</item>
+    <style name="Theme.NMC1" parent="Base.Theme.NMC1">
+        <!--
+        <item name="android:statusBarColor">@color/black</item> 상태바 색상
+        <item name="android:windowLightStatusBar">false</item> 상태바 아이콘(true: 검정 / false: 흰색)
+        -->
     </style>
+
+    <style name="tab_main_size" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">11sp</item>       <!-- 탭 레이아웃 폰트 사이즈-->
+    </style>
+
+    <!--
+    <style name="nmc1Status" parnet="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#00ff00</item>
+    </style>
+    -->
 </resources>

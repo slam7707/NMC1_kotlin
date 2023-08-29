@@ -5,9 +5,10 @@ import android.util.Log
 import android.widget.LinearLayout
 
 class NMC1ComButtons(val context: Context) {
-    val l_out : LinearLayout
+//    val l_out : LinearLayout
     init {
         Log.d("myLog", "------------------ NMC1ComButtons Init")
+        /*
         l_out = LinearLayout(context)
 
         l_out.layoutParams = LinearLayout.LayoutParams (
@@ -16,9 +17,6 @@ class NMC1ComButtons(val context: Context) {
         )
 
         l_out.orientation = LinearLayout.VERTICAL
-    }
-
-    public fun GetCommonButtons() : LinearLayout {
-        return l_out
+        */
     }
 }

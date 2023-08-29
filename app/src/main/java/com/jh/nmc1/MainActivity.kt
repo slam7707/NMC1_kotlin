@@ -1,10 +1,13 @@
 package com.jh.nmc1
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowInsetsController
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.view.WindowInsetsControllerCompat
 import com.jh.nmc1.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
@@ -21,12 +24,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)                    // view binding
-//      binding.root.addView(m_proc.MPGetMainView())    // mainproc의 상태뷰 가져오기
         m_proc.MPElementsInit()
-
-        val tv : TextView = this.findViewById(R.id.textView)
+        MASetStatusBar()
     }
-    fun MAGetMainProc() : MainProc {
-        return this.m_proc;
+    private fun MASetStatusBar() {  // 상태바 색상변경
+        window.apply {
+            statusBarColor = Color.BLACK
+            WindowInsetsControllerCompat(this, this.decorView).isAppearanceLightStatusBars = false
+        }
     }
 }

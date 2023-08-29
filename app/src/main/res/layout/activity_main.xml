@@ -6,20 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/frameMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:foregroundGravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        android:orientation="vertical">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             app:tabTextAppearance="@style/tab_main_size">
 
             <com.google.android.material.tabs.TabItem
@@ -49,21 +45,11 @@
 
         </com.google.android.material.tabs.TabLayout>
 
-        <TextView
-            android:id="@+id/mainText"
-            android:layout_width="170dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:textSize="100sp"/>
-
         <include layout="@layout/nmc1_info"
             android:id="@+id/nmc1_info_view"/>
 
         <include layout="@layout/nmc1_common_buttons"
             android:id="@+id/nmc1_com_btn" />
-
-        <include layout="@layout/nmc1pos"
-            android:id="@+id/nmc1poslay" />
         <!--
         <LinearLayout
             android:id="@+id/main_linear"
@@ -74,6 +60,6 @@
             app:layout_constraintStart_toStartOf="@+id/tab_main"
            />
            -->
-    </FrameLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
