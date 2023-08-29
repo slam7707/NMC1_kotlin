@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private fun MASetStatusBar() {  // 상태바 색상변경
         window.apply {
             statusBarColor = Color.BLACK
-            WindowInsetsControllerCompat(this, this.decorView).isAppearanceLightStatusBars = false
+            WindowInsetsControllerCompat(this, this.decorView).isAppearanceLightStatusBars = false // true = black, false = white
         }
     }
 }

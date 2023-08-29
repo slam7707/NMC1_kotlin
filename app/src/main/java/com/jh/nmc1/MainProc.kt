@@ -16,6 +16,7 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
     val nmc1ComBtn : NMC1ComButtons
     init {
         Log.d("myLog", "------------------ MainProc Init")
+
         nmc1View = NMC1View(context)
         nmc1ComBtn = NMC1ComButtons(context)
 
@@ -35,15 +36,5 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
         commBtnLayout.layoutParams.height = LinearLayout.LayoutParams.WRAP_CONTENT
     }
 
-    public fun MPElementsInit() {
-         binding.root.addView(nmc1View)
-
-        /*
-        val tv = binding.nmc1ComBtn.comView
-        val tv_params = tv.layoutParams as LinearLayout.LayoutParams
-        tv_params.width = LinearLayout.LayoutParams.MATCH_PARENT
-        tv_params.height = LinearLayout.LayoutParams.MATCH_PARENT
-        tv.layoutParams = tv_params
-         */
-    }
+    public fun MPElementsInit() {binding.root.addView(nmc1View)}
 }
