@@ -1,21 +1,37 @@
 package com.jh.nmc1
 
 import android.content.Context
-import android.graphics.Rect
 import android.util.Log
+import android.view.View
 import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.LinearLayoutCompat
-import androidx.core.view.get
 import com.jh.nmc1.databinding.ActivityMainBinding
-
 
 class MainProc(val context: Context, val binding : ActivityMainBinding) {
     val nmc1View : NMC1View
     val nmc1ComBtn : NMC1ComButtons
     init {
         Log.d("myLog", "------------------ MainProc Init")
+
+        val view : View = View(context)
+        // 상태바 크기 구하기
+        val sBarHeight : Int
+        var resID : Int = context.resources.getIdentifier("status_bar_height", "dimen", "android")
+
+        if (resID > 0) {
+            sBarHeight = view.resources.getDimensionPixelSize(resID)
+            Log.d("deviceSize1", "---------------status bar : ${sBarHeight}")
+        }
+
+        // 네비게이션바 크기 구하기
+        val nBarHeight : Int
+        resID = context.resources.getIdentifier("navigation_bar_height", "dimen", "android")
+
+        if (resID > 0) {
+            nBarHeight = view.resources.getDimensionPixelSize(resID)
+            Log.d("deviceSize1", "---------------navigation bar : ${nBarHeight}")
+        }
+
+
 
         nmc1View = NMC1View(context)
         nmc1ComBtn = NMC1ComButtons(context)

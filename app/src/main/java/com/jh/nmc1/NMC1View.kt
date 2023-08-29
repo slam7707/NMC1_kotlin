@@ -28,23 +28,6 @@ class NMC1View (context : Context) : View(context) {
 
         // 디바이스 픽셀 구하기
         m_rect = Rect(0,0, display?.widthPixels!!.toInt(), display?.heightPixels!!.toInt())
-
-
-        val sBarHeight : Int
-        val resID : Int = m_context.resources.getIdentifier("status_bar_height", "dimen", "android")
-
-        if (resID > 0) {
-            sBarHeight = resources.getDimensionPixelSize(resID)
-            Log.d("deviceSize", "---------------status bar : ${sBarHeight}")
-        }
-        // 상태바 크기 구하기
-
-        val resID1 : Int = m_context.resources.getIdentifier("navigation_bar_height", "dimen", "android")
-        val nBarHeight : Int
-        if (resID1 > 0) {
-            nBarHeight = resources.getDimensionPixelSize(resID1)
-            Log.d("deviceSize", "---------------navigation bar : ${nBarHeight}")
-        }
         // 네비게이션바 크기 구하기
     }
 
