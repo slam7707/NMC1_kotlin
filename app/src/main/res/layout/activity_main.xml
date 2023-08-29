@@ -48,8 +48,11 @@
         <include layout="@layout/nmc1_info"
             android:id="@+id/nmc1_info_view"/>
 
-        <include layout="@layout/nmc1_common_buttons"
-            android:id="@+id/nmc1_com_btn" />
+        <include layout="@layout/nmc1_common_jh_button"
+            android:id="@+id/nmc1_com_jh_btn" />
+
+        <include layout="@layout/nmc1_common_etc_button"
+            android:id="@+id/nmc1_com_etc_btn" />
         <!--
         <LinearLayout
             android:id="@+id/main_linear"

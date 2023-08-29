@@ -41,9 +41,13 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
         infoLayout.layoutParams.height = cy - 750 // 600 : common button, 150 : tab layout
         // 레이아웃 속성변경
 
-        val commBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_btn)
-        commBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
-        commBtnLayout.layoutParams.height = 600
+        val jhBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_jh_btn)
+        jhBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
+        jhBtnLayout.layoutParams.height = 300
+
+        val etcBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_etc_btn)
+        etcBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
+        etcBtnLayout.layoutParams.height = 300
     }
 
     public fun MPElementsInit() {binding.root.addView(nmc1View)}
