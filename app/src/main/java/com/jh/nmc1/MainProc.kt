@@ -24,14 +24,12 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
 
             Log.d("myLog", "---------------status bar : ${rID[0]}, nevi bar : ${rID[1]}")
         }
-
-
         val display = context.applicationContext?.resources?.displayMetrics     // 디바이스 크기 가져오기
 //      val cx = display?.widthPixels!!.toInt()
         val cy = display?.heightPixels!!.toInt()        // 세로길이
 
         nmc1View = NMC1View(context)
-        nmc1ComBtn = NMC1ComButtons(context)
+        nmc1ComBtn = NMC1ComButtons(context, binding)
 
         val tablayouy = binding.root.findViewById<TabLayout>(R.id.tab_main)
         tablayouy.layoutParams.height = 150

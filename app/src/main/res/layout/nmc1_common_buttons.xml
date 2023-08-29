@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@color/white"
+    android:orientation="horizontal"
+    android:background="@android:color/holo_blue_light"
     >
+    <!--
     <TextView
     android:id="@+id/comView"
     android:layout_width="wrap_content"
@@ -12,4 +13,21 @@
     android:layout_gravity="center"
     android:text="common0987654321"
     android:textSize="100sp"/>
+    -->
+    <Button
+        android:id="@+id/jog_cw_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="<<-"/>
+    <Button
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="home"/>
+    <Button
+        android:id="@+id/jog_ccw_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="home"/>
+
 </LinearLayout>
