@@ -10,7 +10,6 @@ import com.jh.nmc1.databinding.ActivityMainBinding
 class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
      init {
         Log.d("myLog", "------------------ NMC1ComButtons Init")
-
     }
     fun ComButtonInit(cx : Int, cy : Int, view : View) {
         val div : Int = (cx - 900) / 6                      // 좌우 마진 계산

@@ -17,7 +17,6 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
         nmc1View = NMC1View(context)                    // 메인뷰 생성
         nmc1ComBtn = NMC1ComButtons(context, binding)   // 공통버튼 생성
         MPInitLayout();                                 // 레이아웃 크기 조절
-
     }
 
     public fun MPElementsInit() {binding.root.addView(nmc1View)}
@@ -47,10 +46,10 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
         infoLayout.layoutParams.height = (cy - 650) / 2 // 500 : common button, 150 : tab layout
         // 레이아웃 속성변경
 
-        val vPager : ViewPager2 = binding.viewPager
-        val vPagerParams = vPager.layoutParams
-        vPagerParams.height = (cy - 650) / 2
-        vPager.layoutParams = vPagerParams
+        val vPager : ViewPager2 = binding.viewPager     // 뷰페이저 가져오기
+        val vPagerParams = vPager.layoutParams          // 뷰페이저 레이아웃 파람
+        vPagerParams.height = (cy - 650) / 2            // 뷰페이저 높이 설정
+        vPager.layoutParams = vPagerParams              // 저장
 
         val jhBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_jh_btn)
         jhBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
