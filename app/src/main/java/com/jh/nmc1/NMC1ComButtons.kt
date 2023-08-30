@@ -18,6 +18,8 @@ class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT,
         )
+        btnParams.setMargins(div, 50, div, 0)   // 마진 설정
+
         val strCommBtn : String = "comm_btn_"      // 아이디
         val strPack : String = "com.jh.nmc1"       // 패키지
 
@@ -30,7 +32,6 @@ class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
                         strPack
                     )
                 )       // jog 버튼
-                btnParams.setMargins(div, 50, div, 0)   // 마진 설정
                 commBtn.layoutParams = btnParams      //버튼 레이아웃 설정
                 commBtn.layoutParams.width = 300
                 commBtn.layoutParams.height = 150
