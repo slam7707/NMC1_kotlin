@@ -8,6 +8,7 @@ import android.view.WindowInsetsController
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.fragment.app.Fragment
 import com.jh.nmc1.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
@@ -24,6 +25,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)                    // view binding
+
+        val fragmentList = listOf<Fragment>(TabPos(), TabRep(), TabCStep(), TabBase(), TabConn())
+        val adapter = FragmentAdater(this)
+        adapter.fragmentList = fragmentList
+        binding.viewPager.adapter = adapter
+
         m_proc.MPElementsInit()
         MASetStatusBar()
     }

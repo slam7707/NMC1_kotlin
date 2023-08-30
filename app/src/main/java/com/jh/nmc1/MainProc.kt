@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.jh.nmc1.databinding.ActivityMainBinding
 
@@ -43,8 +44,13 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
         // 바인딩에서 include 된 레이아웃 id 가져오기
 
         infoLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
-        infoLayout.layoutParams.height = cy - 650 // 500 : common button, 150 : tab layout
+        infoLayout.layoutParams.height = (cy - 650) / 2 // 500 : common button, 150 : tab layout
         // 레이아웃 속성변경
+
+        val vPager : ViewPager2 = binding.viewPager
+        val vPagerParams = vPager.layoutParams
+        vPagerParams.height = (cy - 650) / 2
+        vPager.layoutParams = vPagerParams
 
         val jhBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_jh_btn)
         jhBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT

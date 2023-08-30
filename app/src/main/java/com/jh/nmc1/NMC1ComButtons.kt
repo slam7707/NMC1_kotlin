@@ -15,6 +15,32 @@ class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
     fun ComButtonInit(cx : Int, cy : Int, view : View) {
         val div : Int = (cx - 900) / 6                      // 좌우 마진 계산
 
+        val btnParams = LinearLayout.LayoutParams (         // 버튼 레이아웃
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+        )
+        val strCommBtn : String = "comm_btn_"      // 아이디
+        val strPack : String = "com.jh.nmc1"       // 패키지
+
+        for (i in 0..1){
+              for (f in 0..2) {
+                 val commBtn: Button = binding.root.findViewById<Button>(
+                    view.resources.getIdentifier(
+                        strCommBtn + (f + i * 3),
+                        "id",
+                        strPack
+                    )
+                )       // jog 버튼
+                btnParams.setMargins(div, 50, div, 0)   // 마진 설정
+                commBtn.layoutParams = btnParams      //버튼 레이아웃 설정
+                commBtn.layoutParams.width = 300
+                commBtn.layoutParams.height = 150
+            }
+        }
+
+        /*
+        val div : Int = (cx - 900) / 6                      // 좌우 마진 계산
+
         val btnParams = LinearLayout.LayoutParams (         // 버튼 레이아웃 
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -36,8 +62,9 @@ class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
             etcBtn.layoutParams.width = 300
             etcBtn.layoutParams.height = 150
         }
-
+*/
     }
+
     /*
     fun ComButtonETCInit(cx : Int, cy : Int, view : View){
         val packName : String = "com.jh.nmc1"

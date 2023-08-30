@@ -4,26 +4,23 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
     <Button
-        android:id="@+id/etc_btn_1"
+        android:id="@+id/comm_btn_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:textColor="@color/black"
         android:text="Pos Clr"
         />
     <Button
-        android:id="@+id/etc_btn_2"
+        android:id="@+id/comm_btn_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:textColor="@color/black"
         android:text="CHome"
         />
     <Button
-        android:id="@+id/etc_btn_3"
+        android:id="@+id/comm_btn_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:textColor="@color/black"
         android:text="Reset"
         />

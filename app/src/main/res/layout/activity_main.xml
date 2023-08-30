@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             app:tabTextAppearance="@style/tab_main_size">
-
+<!--
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,17 +42,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tab_set" />
+-->
 
         </com.google.android.material.tabs.TabLayout>
 
         <include layout="@layout/nmc1_info"
             android:id="@+id/nmc1_info_view"/>
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <include layout="@layout/nmc1_common_jh_button"
             android:id="@+id/nmc1_com_jh_btn" />
 
         <include layout="@layout/nmc1_common_etc_button"
             android:id="@+id/nmc1_com_etc_btn" />
+
+
         <!--
         <LinearLayout
             android:id="@+id/main_linear"
