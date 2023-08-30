@@ -3,6 +3,7 @@ package com.jh.nmc1
 import android.content.Context
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import com.google.android.material.tabs.TabLayout
 import com.jh.nmc1.databinding.ActivityMainBinding
@@ -11,7 +12,7 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
     val nmc1View : NMC1View
     val nmc1ComBtn : NMC1ComButtons
     init {
-        Log.d("myLog", "------------------ MainProc Init")
+        Log.d("myLog", "------------------ MainProc Init");
 
         val view : View = View(context)
         val rID : IntArray = IntArray(2)
@@ -48,6 +49,7 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
         val etcBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_etc_btn)
         etcBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
         etcBtnLayout.layoutParams.height = 300
+
     }
 
     public fun MPElementsInit() {binding.root.addView(nmc1View)}

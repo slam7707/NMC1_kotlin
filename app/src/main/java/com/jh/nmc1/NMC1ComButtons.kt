@@ -10,24 +10,18 @@ class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
      init {
         Log.d("myLog", "------------------ NMC1ComButtons Init")
 
+         val btn1 = binding.nmc1ComJhBtn.jogBtn1
+         val btn2 = binding.nmc1ComJhBtn.jogBtn2
+         val btn3 = binding.nmc1ComJhBtn.jogBtn3
 
-    /*
-    val buttonContainer: LinearLayout = findViewById(R.id.buttonContainer)
+         val btnParams = LinearLayout.LayoutParams (
+             LinearLayout.LayoutParams.WRAP_CONTENT,
+             LinearLayout.LayoutParams.WRAP_CONTENT,
+         )
+         btnParams.setMargins(300, 100, 0, 0)
+         btn1.layoutParams = btnParams
+         btn2.layoutParams = btnParams
+         btn3.layoutParams = btnParams
 
-    for (i in 1..5) {
-        val button = Button(this)
-        button.text = "Button $i"
-        val buttonId = View.generateViewId() // 고유한 ID 생성
-        button.id = buttonId
-
-        // 버튼 클릭 리스너 설정
-        button.setOnClickListener {
-            // 클릭 이벤트 처리
-        }
-
-        buttonContainer.addView(button)
-    }
-
-     */
     }
 }
