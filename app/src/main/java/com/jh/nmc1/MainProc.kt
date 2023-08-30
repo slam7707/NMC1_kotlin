@@ -13,7 +13,14 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
     val nmc1ComBtn : NMC1ComButtons
     init {
         Log.d("myLog", "------------------ MainProc Init");
+        nmc1View = NMC1View(context)                    // 메인뷰 생성
+        nmc1ComBtn = NMC1ComButtons(context, binding)   // 공통버튼 생성
+        MPInitLayout();                                 // 레이아웃 크기 조절
 
+    }
+
+    public fun MPElementsInit() {binding.root.addView(nmc1View)}
+    private fun MPInitLayout() {
         val view : View = View(context)
         val rID : IntArray = IntArray(2)
         rID[0] = context.resources.getIdentifier("status_bar_height", "dimen", "android")       // status bar
@@ -25,32 +32,28 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
 
             Log.d("myLog", "---------------status bar : ${rID[0]}, nevi bar : ${rID[1]}")
         }
-        val display = context.applicationContext?.resources?.displayMetrics     // 디바이스 크기 가져오기
-//      val cx = display?.widthPixels!!.toInt()
-        val cy = display?.heightPixels!!.toInt()        // 세로길이
+        val display = context.applicationContext?.resources?.displayMetrics     // 디바이스 크기 가져오기(상태, 네비게이션 빼고)
+        val cx = display?.widthPixels!!.toInt()                                 // 가로길이 px
+        val cy = display?.heightPixels!!.toInt()                                // 세로길이 px
 
-        nmc1View = NMC1View(context)
-        nmc1ComBtn = NMC1ComButtons(context, binding)
-
-        val tablayouy = binding.root.findViewById<TabLayout>(R.id.tab_main)
-        tablayouy.layoutParams.height = 150
+        val tablayout = binding.root.findViewById<TabLayout>(R.id.tab_main)
+        tablayout.layoutParams.height = 150      // 150 : tablayout
 
         val infoLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_info_view)
         // 바인딩에서 include 된 레이아웃 id 가져오기
 
         infoLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
-        infoLayout.layoutParams.height = cy - 750 // 600 : common button, 150 : tab layout
+        infoLayout.layoutParams.height = cy - 650 // 500 : common button, 150 : tab layout
         // 레이아웃 속성변경
 
         val jhBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_jh_btn)
         jhBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
-        jhBtnLayout.layoutParams.height = 300
+        jhBtnLayout.layoutParams.height = 250    // jog, home fixed
 
         val etcBtnLayout = binding.root.findViewById<LinearLayout>(R.id.nmc1_com_etc_btn)
         etcBtnLayout.layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT
-        etcBtnLayout.layoutParams.height = 300
+        etcBtnLayout.layoutParams.height = 250   // etc oper fixed
 
+        nmc1ComBtn.ComButtonInit(cx, cy, view)
     }
-
-    public fun MPElementsInit() {binding.root.addView(nmc1View)}
 }
