@@ -5,6 +5,10 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
+import androidx.core.view.marginBottom
+import androidx.core.view.marginLeft
+import androidx.core.view.marginRight
+import androidx.core.view.marginTop
 import com.jh.nmc1.databinding.ActivityMainBinding
 
 class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
