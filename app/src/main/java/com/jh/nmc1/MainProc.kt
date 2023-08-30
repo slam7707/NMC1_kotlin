@@ -24,13 +24,13 @@ class MainProc(val context: Context, val binding : ActivityMainBinding) {
         val view : View = View(context)
         val rID : IntArray = IntArray(2)
         rID[0] = context.resources.getIdentifier("status_bar_height", "dimen", "android")       // status bar
-        rID[1] = context.resources.getIdentifier("navigation_bar_height", "dimen", "android")   // nevigation bar
+        rID[1] = context.resources.getIdentifier("navigation_bar_height", "dimen", "android")   // navigation bar
 
         if (rID[0] > 0 && rID[1] > 0){
             rID[0] = view.resources.getDimensionPixelSize(rID[0])
             rID[1] = view.resources.getDimensionPixelSize(rID[1])
 
-            Log.d("myLog", "---------------status bar : ${rID[0]}, nevi bar : ${rID[1]}")
+            Log.d("myLog", "---------------status bar : ${rID[0]}, navi bar : ${rID[1]}")
         }
         val display = context.applicationContext?.resources?.displayMetrics     // 디바이스 크기 가져오기(상태, 네비게이션 빼고)
         val cx = display?.widthPixels!!.toInt()                                 // 가로길이 px
