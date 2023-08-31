@@ -9,6 +9,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:text="view1234567890"
         android:textSize="100sp"/>
 </LinearLayout>
