@@ -62,10 +62,10 @@ class NMC1View (context : Context) : View(context) {
         var cx = m_cx / 10
         var cy = m_cy / 20
 
-        canvas?.drawRect(Rect(0, 150, m_cx, cy * 3 + 150), m_paint_rect)
+//        canvas?.drawRect(Rect(0, 150, m_cx, cy * 3 + 150), m_paint_rect)
         canvas?.drawText("Position : 0.000 mm", 0.0f + cx * 5, cy * 3 + 150f, m_paint_string)
 
-        canvas?.drawRect(Rect(0, cy * 3 + 150, m_cx, cy * 6 + 150), m_paint_rect)
+//        canvas?.drawRect(Rect(0, cy * 3 + 150, m_cx, cy * 6 + 150), m_paint_rect)
         canvas?.drawText("Velocity : 0 mm/min", 0.0f + cx * 5, cy * 6 + 150f, m_paint_string)
 
         m_paint_string.textAlign = Paint.Align.RIGHT
@@ -74,7 +74,7 @@ class NMC1View (context : Context) : View(context) {
         val title = arrayOf<String>("Start Position :", "End Position :", "Oper Speed :", "Delay Time :", "Step Count :", "Repeat Count :")
 
         for (i in 0..5) {
-            canvas?.drawRect(Rect(0, (cy * 6 + 150) + (cy * i * 2) + (cy / 2), m_cx, (cy * 8 + 150) + (cy * i * 2) + (cy / 2)), m_paint_rect)
+//            canvas?.drawRect(Rect(0, (cy * 6 + 150) + (cy * i * 2) + (cy / 2), m_cx, (cy * 8 + 150) + (cy * i * 2) + (cy / 2)), m_paint_rect)
             canvas?.drawText(title[i], cx * 3 + 0.0f + (cy / 2), (cy * 8 + 150) + (cy * i * 2) + 0.0f + (cy / 2), m_paint_string)
         }
         /*

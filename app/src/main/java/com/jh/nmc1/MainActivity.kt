@@ -4,13 +4,11 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.WindowInsetsController
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.jh.nmc1.databinding.ActivityMainBinding
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     val binding by lazy {ActivityMainBinding.inflate(layoutInflater)}
@@ -31,8 +29,32 @@ class MainActivity : AppCompatActivity() {
         adapter.fragmentList = fragmentList
         binding.viewPager.adapter = adapter
 
+        val tabTitle = listOf<String>("Position", "Repeat", "C-Step", "Base", "Setting")
+        TabLayoutMediator(binding.tabMain, binding.viewPager) {
+            tab, position->tab.text = tabTitle[position]
+        }.attach()
+
         m_proc.MPElementsInit()
         MASetStatusBar()
+
+        val tablayout : TabLayout = binding.tabMain
+
+        tablayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                // 탭 선택시 호출되는 코드
+                val selectedPosition = tab.position
+                // 선택된 탭에 따라 필요한 동작 수행
+                Log.d("myLog", "------ tab pos : ${selectedPosition}")
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+                // 탭 선택 해제시 호출되는 코드
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab) {
+                // 이미 선택된 탭을 다시 선택했을 때 호출되는 코드
+            }
+        })
     }
     private fun MASetStatusBar() {  // 상태바 색상변경
         window.apply {
