@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)                    // view binding
 
-        val fragmentList = listOf<Fragment>(TabPos(), TabRep(), TabCStep(), TabBase(), TabConn())
-        val adapter = FragmentAdater(this)
-        adapter.fragmentList = fragmentList
-        binding.viewPager.adapter = adapter
+//        val fragmentList = listOf<Fragment>(TabPos(), TabRep(), TabCStep(), TabBase(), TabConn())
+//        val adapter = FragmentAdater(this)
+//        adapter.fragmentList = fragmentList
+//        binding.viewPager.adapter = adapter
 
         val tabTitle = listOf<String>("Position", "Repeat", "C-Step", "Base", "Setting")
         TabLayoutMediator(binding.tabMain, binding.viewPager) {

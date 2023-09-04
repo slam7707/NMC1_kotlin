@@ -63,10 +63,10 @@ class NMC1View (context : Context) : View(context) {
         var cy = m_cy / 20
 
 //        canvas?.drawRect(Rect(0, 150, m_cx, cy * 3 + 150), m_paint_rect)
-        canvas?.drawText("Position : 0.000 mm", 0.0f + cx * 5, cy * 3 + 150f, m_paint_string)
+        canvas?.drawText("0.000 mm", 0.0f + cx * 5, cy * 3 + 150f, m_paint_string)
 
 //        canvas?.drawRect(Rect(0, cy * 3 + 150, m_cx, cy * 6 + 150), m_paint_rect)
-        canvas?.drawText("Velocity : 0 mm/min", 0.0f + cx * 5, cy * 6 + 150f, m_paint_string)
+        canvas?.drawText("0 mm/min", 0.0f + cx * 5, cy * 6 + 150f, m_paint_string)
 
         m_paint_string.textAlign = Paint.Align.RIGHT
         m_paint_string.textSize = cy + 0.0f
