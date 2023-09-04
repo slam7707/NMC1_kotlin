@@ -9,6 +9,7 @@ import androidx.core.view.marginBottom
 import androidx.core.view.marginLeft
 import androidx.core.view.marginRight
 import androidx.core.view.marginTop
+import androidx.core.view.setPadding
 import com.jh.nmc1.databinding.ActivityMainBinding
 
 class NMC1ComButtons(val context: Context, val binding : ActivityMainBinding) {
