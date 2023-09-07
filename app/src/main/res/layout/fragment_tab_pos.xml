@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#00ff00"
     android:orientation="vertical"
     tools:context=".TabPos">
 
@@ -18,17 +18,14 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1">
-
         <!--
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="300dp"
         -->
-
         <RadioButton
             android:id="@+id/tab_pos_abs_btn"
             android:layout_width="match_parent"
@@ -37,7 +34,6 @@
             android:text="Absolute"
             android:textColor="@color/black"
             android:textSize="20dp" />
-
 
         <RadioButton
             android:id="@+id/tab_pos_inc_btn"
@@ -49,6 +45,45 @@
             android:textSize="20dp" />
     </RadioGroup>
 
+    <Button
+        android:id="@+id/tab_pos_move_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Move"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        />
+
+    <Button
+        android:id="@+id/tab_pos_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tab_pos_move_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        />
+
+    <Button
+        android:id="@+id/tab_pos_pause_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tab_pos_move_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        />
+    <!--
     <Button
         android:id="@+id/tab_pos_save_btn"
         android:layout_width="wrap_content"
@@ -87,6 +122,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tab_pos_move_btn"
         app:layout_constraintTop_toTopOf="parent" />
-
+-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
