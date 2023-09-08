@@ -53,7 +53,7 @@ class NMC1View (context : Context) : View(context) {
         m_paint_rect.strokeWidth = 3.0f
         m_paint_rect.textSize = 100f
 
-        m_paint_string.color = Color.WHITE
+        m_paint_string.color = Color.GREEN
         m_paint_string.style = Paint.Style.FILL
         m_paint_string.strokeWidth = 3.0f
         m_paint_string.textSize = 100f
@@ -77,6 +77,9 @@ class NMC1View (context : Context) : View(context) {
 //            canvas?.drawRect(Rect(0, (cy * 6 + 150) + (cy * i * 2) + (cy / 2), m_cx, (cy * 8 + 150) + (cy * i * 2) + (cy / 2)), m_paint_rect)
             canvas?.drawText(title[i], cx * 3 + 0.0f + (cy / 2), (cy * 8 + 150) + (cy * i * 2) + 0.0f + (cy / 2), m_paint_string)
         }
+
+        canvas?.drawRect(Rect(0, 150, m_cx, m_cy + 150), m_paint_rect);
+
         /*
         m_paint_string.textAlign = Paint.Align.RIGHT
         m_paint_string.textSize = 50f
