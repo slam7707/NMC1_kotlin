@@ -100,7 +100,6 @@
         app:layout_constraintHorizontal_bias="0.65"
         />
 
-
     <EditText
         android:id="@+id/tap_pos_oper_spd_input"
         android:layout_width="wrap_content"
