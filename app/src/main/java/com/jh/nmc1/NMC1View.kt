@@ -23,7 +23,7 @@ class NMC1View (context : Context) : View(context) {
         this.m_context = context
         val display = m_context.applicationContext?.resources?.displayMetrics
         m_cx = display?.widthPixels!!.toInt()                                             // 가로길이 px
-        m_cy = (display?.heightPixels!!.toInt() - 650) / 2                                // 세로길이 px
+        m_cy = (display?.heightPixels!!.toInt() - 500) / 2                                // 세로길이 px
 
         m_rect = Rect(0, 150, m_cx, m_cy + 150)                           // 150 : 탭레이아웃 높이
 

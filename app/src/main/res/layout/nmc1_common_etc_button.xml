@@ -8,20 +8,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Pos Clr"
+        android:text="@string/common_pos_clr"
         />
     <Button
         android:id="@+id/comm_btn_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="CHome"
+        android:text="@string/common_chome"
         />
     <Button
         android:id="@+id/comm_btn_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Reset"
+        android:text="@string/common_reset"
         />
 </LinearLayout>

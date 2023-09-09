@@ -7,4 +7,26 @@
     <string name="tab_set">Settings</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- common button jog -->
+    <string name="common_jog_cw">Jog CW</string>
+    <string name="common_jog_ccw">Jog CCW</string>
+    <string name="common_home">Home</string>
+    <!-- common button etc -->
+    <string name="common_pos_clr">Pos Clr</string>
+    <string name="common_chome">CHome</string>
+    <string name="common_reset">Reset</string>
+
+    <!-- tab common button name -->
+    <string name="tap_common_save">Save</string>
+    <string name="tap_common_move">Move</string>
+    <string name="tap_common_pause">Pause</string>
+
+    <!-- tab pos radio res id -->
+    <string name="tap_pos_absolue">Absolute</string>
+    <string name="tap_pos_incmenal">Increse</string>
+
+    <!-- Input Description -->
+    <string name = "target_position">Target Position</string>
+    <string name = "operation_speed">Operation Speed</string>
+
 </resources>

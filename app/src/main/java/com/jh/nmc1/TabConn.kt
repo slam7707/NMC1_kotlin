@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.jh.nmc1.databinding.ActivityMainBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,7 +17,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [TabConn.newInstance] factory method to
  * create an instance of this fragment.
  */
-class TabConn : Fragment() {
+class TabConn(val binding: ActivityMainBinding) : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -48,8 +49,8 @@ class TabConn : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TabConn().apply {
+        fun newInstance(binding: ActivityMainBinding) =
+            TabConn(binding).apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

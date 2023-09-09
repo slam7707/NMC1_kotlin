@@ -1,8 +1,11 @@
 package com.jh.nmc1
 
+import android.app.Application
+import android.content.Context
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
@@ -10,9 +13,35 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.jh.nmc1.databinding.ActivityMainBinding
 
+class MyApp: Application() {
+//    lateinit var context: Context
+    init {
+        instance = this
+//      display = instance!!.applicationContext?.resources?.displayMetrics
+//        appDisplay = this!!.applicationContext?.resources?.displayMetrics
+//        cx = appDisplay?.widthPixels!!.toInt()
+//        cy = appDisplay?.heightPixels!!.toInt()
+    }
+    companion object{
+        private var instance: MyApp? = null
+        private var appDisplay : DisplayMetrics? = null
+        private var cx : Int = 0
+        private var cy : Int = 0
+        fun apllicationContext() : Context {
+            return instance!!.applicationContext
+        }
+        fun MyAppSizeCX() : Int{
+            return cx
+        }
+        fun MyAppSizeCY() : Int{
+            return cy
+        }
+    }
+}
+
 class MainActivity : AppCompatActivity() {
     val binding by lazy {ActivityMainBinding.inflate(layoutInflater)}
-    val m_proc : MainProc by lazy { MainProc(this, binding) }
+    val m_proc : MainProc by lazy { MainProc(binding) }
 
     // by lazy 사용법(P.203) : 해당 함수나 변수가 호출될 때 선언으로 초기화 됨.
     // MainProc을 init으로 초기화하게되면 :  init -> onCreate 순으로 호출하므로  binding이 실행되지 않고 비정상 종료됨.
@@ -24,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)                    // view binding
 
-        val fragmentList = listOf<Fragment>(TabPos(), TabRep(), TabCStep(), TabBase(), TabConn())
+        val fragmentList = listOf<Fragment>(TabPos(binding), TabRep(binding), TabCStep(binding), TabBase(binding), TabConn(binding))
         val adapter = FragmentAdater(this)
         adapter.fragmentList = fragmentList
         binding.viewPager.adapter = adapter
