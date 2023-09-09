@@ -33,6 +33,7 @@ class TabPos(val binding : ActivityMainBinding) : Fragment() {
 
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

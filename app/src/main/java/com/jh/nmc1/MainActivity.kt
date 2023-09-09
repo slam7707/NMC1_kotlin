@@ -24,7 +24,7 @@ class MyApp: Application() {
         private var appDisplay : DisplayMetrics? = null
         private var cx : Int = 0
         private var cy : Int = 0
-        fun apllicationContext() : Context {
+        fun MyAppContext() : Context {
             return instance!!.applicationContext
         }
         fun MyAppSizeCX() : Int{
@@ -39,7 +39,7 @@ class MyApp: Application() {
         }
         private fun appDisplayInit() {
             if (appDisplay == null) {
-                appDisplay = apllicationContext().applicationContext?.resources?.displayMetrics
+                appDisplay = MyAppContext().applicationContext?.resources?.displayMetrics
             }
         }
     }

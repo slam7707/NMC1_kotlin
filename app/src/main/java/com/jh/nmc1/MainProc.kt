@@ -3,20 +3,13 @@ package com.jh.nmc1
 import android.app.Application
 import android.content.Context
 import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.LinearLayout
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.lifecycle.ViewModelProvider.NewInstanceFactory.Companion.instance
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
+import com.jh.nmc1.MyApp.Companion.MyAppContext
 import com.jh.nmc1.MyApp.Companion.MyAppSizeCX
 import com.jh.nmc1.MyApp.Companion.MyAppSizeCY
-import com.jh.nmc1.MyApp.Companion.apllicationContext
 import com.jh.nmc1.databinding.ActivityMainBinding
 
 class MainProc(val binding : ActivityMainBinding) {
-    val context : Context = apllicationContext()
+    val context : Context = MyAppContext()
     val nmc1View : NMC1View
     val nmc1ComBtn : NMC1ComButtons
 
