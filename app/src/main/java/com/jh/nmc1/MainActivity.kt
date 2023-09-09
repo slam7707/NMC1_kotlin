@@ -16,11 +16,8 @@ import com.jh.nmc1.databinding.ActivityMainBinding
 class MyApp: Application() {
 //    lateinit var context: Context
     init {
+    Log.d("myLog", "------------------ MyAPP Context Init")
         instance = this
-//      display = instance!!.applicationContext?.resources?.displayMetrics
-//        appDisplay = this!!.applicationContext?.resources?.displayMetrics
-//        cx = appDisplay?.widthPixels!!.toInt()
-//        cy = appDisplay?.heightPixels!!.toInt()
     }
     companion object{
         private var instance: MyApp? = null
@@ -31,10 +28,19 @@ class MyApp: Application() {
             return instance!!.applicationContext
         }
         fun MyAppSizeCX() : Int{
+            appDisplayInit()
+            cx = appDisplay?.widthPixels!!.toInt()
             return cx
         }
         fun MyAppSizeCY() : Int{
+            appDisplayInit()
+            cy = appDisplay?.heightPixels!!.toInt()
             return cy
+        }
+        private fun appDisplayInit() {
+            if (appDisplay == null) {
+                appDisplay = apllicationContext().applicationContext?.resources?.displayMetrics
+            }
         }
     }
 }

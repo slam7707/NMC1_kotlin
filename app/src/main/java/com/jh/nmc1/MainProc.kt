@@ -19,6 +19,7 @@ class MainProc(val binding : ActivityMainBinding) {
     val context : Context = apllicationContext()
     val nmc1View : NMC1View
     val nmc1ComBtn : NMC1ComButtons
+
     init {
         Log.d("myLog", "------------------ MainProc Init");
         nmc1View = NMC1View(context)                    // 메인뷰 생성
