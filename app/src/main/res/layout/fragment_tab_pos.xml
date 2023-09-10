@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tap_pos_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
@@ -46,7 +47,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/tab_pos_move_btn"
+        android:id="@+id/tab_pos_btn_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tap_common_move"
@@ -59,25 +60,25 @@
         />
 
     <Button
-        android:id="@+id/tab_pos_save_btn"
+        android:id="@+id/tab_pos_btn_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tap_common_save"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tab_pos_move_btn"
+        app:layout_constraintEnd_toStartOf="@+id/tab_pos_btn_1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.95"
         />
 
     <Button
-        android:id="@+id/tab_pos_pause_btn"
+        android:id="@+id/tab_pos_btn_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tap_common_pause"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/tab_pos_move_btn"
+        app:layout_constraintStart_toEndOf="@+id/tab_pos_btn_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

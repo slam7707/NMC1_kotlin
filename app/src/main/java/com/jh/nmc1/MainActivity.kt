@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)                    // view binding
+        m_proc.MPElementsInit()
 
         val fragmentList = listOf<Fragment>(TabPos(binding), TabRep(binding), TabCStep(binding), TabBase(binding), TabConn(binding))
         val adapter = FragmentAdater(this)
@@ -69,7 +70,6 @@ class MainActivity : AppCompatActivity() {
             tab, position->tab.text = tabTitle[position]
         }.attach()
 
-        m_proc.MPElementsInit()
         MASetStatusBar()
 
         val tablayout : TabLayout = binding.tabMain

@@ -1,11 +1,18 @@
 package com.jh.nmc1
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.jh.nmc1.MyApp.Companion.MyAppSizeCX
+import com.jh.nmc1.MyApp.Companion.MyAppSizeCY
 import com.jh.nmc1.databinding.ActivityMainBinding
+import org.w3c.dom.Text
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,6 +38,9 @@ class TabPos(val binding : ActivityMainBinding) : Fragment() {
 //        val cx = display?.widthPixels!!.toInt()                                 // 가로길이 px
 //        val cy = display?.heightPixels!!.toInt()                                // 세로길이 px
 
+//      val btn = binding.viewPager.findViewById<ConstraintLayout>(R.id.tap_pos_layout)
+
+        Log.d("tap_pos", "---------------- oncreate")
     }
 
 
@@ -39,6 +49,11 @@ class TabPos(val binding : ActivityMainBinding) : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_tab_pos, container, false)
+        // TextView를 가져옵니다.
+        val btn = view.findViewById<Button>(R.id.tab_pos_btn_0)
+//      val myTextView = view.findViewById<TextView>(R.id.tap_pos_end_pos_title)
+
         return inflater.inflate(R.layout.fragment_tab_pos, container, false)
     }
     companion object {
